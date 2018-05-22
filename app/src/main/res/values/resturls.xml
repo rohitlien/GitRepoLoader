@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="verify_user">https://api.github.com/users/{username}</string>
+    <string name="user_repo_list_url">https://api.github.com/users/{username}/repos</string>
+    <string name="user_repo_list__page_url">https://api.github.com/users/{username}/repos?page={pageNo}&amp;per_page={pageLimit}</string>
+</resources>

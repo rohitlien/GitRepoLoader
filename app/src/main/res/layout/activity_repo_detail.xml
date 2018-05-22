@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rohit.gitrepoloader.activities.RepoDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:background="@color/appbar_color"
+        android:layout_margin="@dimen/layout_dimen15"
+        android:padding="@dimen/layout_dimen5"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="@dimen/layout_dimen40"
+            android:layout_height="@dimen/layout_dimen40"
+            android:layout_gravity="right"
+            android:id="@+id/img_close"
+            android:padding="@dimen/layout_dimen5"
+            android:src="@drawable/ic_close"/>
+        <com.rohit.gitrepoloader.views.CircleImageView
+            android:layout_width="@dimen/layout_dimen80"
+            android:layout_height="@dimen/layout_dimen80"
+            android:id="@+id/user_avatar"
+
+            android:layout_marginTop="@dimen/layout_dimen10"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/repo_name"
+            android:layout_marginTop="@dimen/layout_dimen5"
+            android:textSize="@dimen/text_dimen15"
+            android:gravity="center"
+            android:textColor="@color/button_text_color"
+            android:text=" "/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/repo_description"
+            android:textSize="@dimen/text_dimen15"
+            android:layout_marginTop="@dimen/layout_dimen5"
+            android:gravity="center"
+            android:textColor="@color/content_text_color"
+            android:text=" "/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/layout_dimen5"
+            android:id="@+id/see_button"
+            android:layout_marginTop="@dimen/layout_dimen10"
+            android:layout_marginBottom="@dimen/layout_dimen15"
+            android:background="@color/red_heart">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="See Repository"
+                android:textColor="@android:color/white"
+                android:paddingLeft="@dimen/layout_dimen15"
+                android:paddingRight="@dimen/layout_dimen15"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

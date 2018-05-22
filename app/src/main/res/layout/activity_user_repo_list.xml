@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rohit.gitrepoloader.activities.UserRepoListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar"
+        android:gravity="center_vertical"
+        android:id="@+id/toolbar_ll"
+        android:padding="@dimen/layout_dimen5">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/layout_dimen40"
+            android:layout_height="@dimen/layout_dimen40"
+            android:padding="@dimen/layout_dimen5"
+            android:src="@drawable/ic_action_back"
+            android:tint="@android:color/white" />
+
+        <com.rohit.gitrepoloader.views.CustomTvBold
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/back_button"
+            android:background="@android:color/transparent"
+            android:gravity="left|top"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/layout_dimen10"
+            android:paddingRight="@dimen/layout_dimen10"
+
+            android:paddingTop="@dimen/layout_dimen2"
+            android:text="@string/user_repo_text"
+            android:textColor="@color/white_pressed"
+            android:textSize="@dimen/text_dimen18" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_repo_ll"
+        android:orientation="vertical"
+        android:layout_above="@+id/ll_loading"
+        android:layout_below="@id/toolbar_ll">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/no_repo_ll"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ProgressBar
+                android:layout_width="@dimen/layout_dimen25"
+                android:layout_height="@dimen/layout_dimen25"
+                android:id="@+id/progress"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loading !"
+                android:gravity="center"
+                android:id="@+id/no_repo_text"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/repo_recycler_view"></android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_loading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/very_light_grey"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:padding="@dimen/layout_dimen4">
+
+        <ProgressBar
+            android:layout_width="@dimen/layout_dimen25"
+            android:layout_height="@dimen/layout_dimen25" />
+
+        <com.rohit.gitrepoloader.views.CustomTvBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading"
+            android:layout_marginLeft="@dimen/layout_dimen10"
+            android:textSize="@dimen/text_dimen16" />
+    </LinearLayout>
+
+</RelativeLayout>

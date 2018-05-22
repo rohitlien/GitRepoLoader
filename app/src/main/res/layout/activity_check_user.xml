@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rohit.gitrepoloader.activities.CheckUserActivity">
+    <com.rohit.gitrepoloader.views.CustomTvBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/git_info"
+        android:gravity="center"
+        android:padding="@dimen/layout_dimen15"
+        android:layout_marginTop="@dimen/layout_dimen100"
+        android:id="@+id/git_info_text"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:id="@+id/username_ll"
+        android:layout_below="@+id/git_info_text"
+        android:background="@drawable/username_bg"
+        android:layout_margin="@dimen/layout_dimen20">
+
+    <ImageView
+            android:layout_width="@dimen/layout_dimen30"
+            android:layout_height="@dimen/layout_dimen30"
+            android:src="@drawable/logo"
+            android:layout_marginLeft="@dimen/layout_dimen20"/>
+        <com.rohit.gitrepoloader.views.CustomEditTextBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your Git Username"
+            android:background="@null"
+            android:layout_marginRight="@dimen/layout_dimen20"
+            android:layout_marginLeft="@dimen/layout_dimen10"
+            android:minWidth="@dimen/layout_dimen100"
+            android:padding="@dimen/layout_dimen5"
+            android:id="@+id/username_et"
+            />
+    </LinearLayout>
+
+
+    <com.rohit.gitrepoloader.views.CustomTvRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_ll"
+        android:layout_centerHorizontal="true"
+        android:text="Check your repositories"
+        android:textColor="@android:color/white"
+        android:paddingLeft="@dimen/layout_dimen10"
+        android:paddingRight="@dimen/layout_dimen10"
+        android:paddingTop="@dimen/layout_dimen4"
+        android:paddingBottom="@dimen/layout_dimen4"
+        android:id="@+id/check_user_tv"
+        android:background="@color/colorPrimary"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/red_heart"
+        android:layout_alignParentRight="true"
+        android:id="@+id/error_ll"
+        android:visibility="gone"
+        android:paddingLeft="@dimen/layout_dimen20"
+        android:paddingRight="@dimen/layout_dimen20"
+        android:layout_marginTop="@dimen/layout_dimen30">
+        <com.rohit.gitrepoloader.views.CustomTvBold
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_match_text"
+            android:textColor="@android:color/white"
+            android:padding="@dimen/layout_dimen5"/>
+    </LinearLayout>
+
+</RelativeLayout>
